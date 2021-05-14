@@ -1,0 +1,196 @@
+@font-face {
+    font-family: roboto;
+    src: url(Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: trajan;
+    src: url(Trajan/Trajan.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration:none;
+    font-family: roboto;
+}
+
+body {
+    background: rgb(233,233,233);
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: rgb(123,17,19);
+    padding: 30px 0;
+}
+
+.wrapper .sidebar img {
+    position: relative;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 100%;
+}
+
+.wrapper .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225, 0.05);
+}
+
+.wrapper .sidebar ul li a{
+    color: #fff;
+    display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover {
+    background: rgb(138, 51, 52);
+    transition: 0.4s;
+}
+
+.wrapper .sidebar ul li:hover a{
+    color: #fff;
+    transition: 0.4s;
+}
+
+.wrapper .main {
+    width: 100%;
+    margin-left: 200px;
+}
+
+.wrapper .main .main_content{
+    text-align: center;
+}
+
+.wrapper .main .main_content h1 {
+    margin-bottom: 30px;
+    font-family: trajan;
+}
+
+.wrapper .main .main_content img {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.wrapper .main .main_content #collegeLogo {
+    width: 20%;
+}
+
+.wrapper .main .main_content .header{
+    padding: 1%;
+    background:#fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+
+
+.wrapper .main .main_content .info {
+    margin: 2%;
+    color: #717171;
+    line-height:25px;
+}
+
+.wrapper .main .main_content .info div {
+    margin-bottom: 20px;
+}
+
+.wrapper .main .main_content .home_content {
+    font-size: 120%;
+    text-align: justify;
+    margin: 0% 20%;
+}
+
+.wrapper .main .main_content .home_content h1{
+    text-align: center;
+    border-bottom: solid;
+    border-bottom-width: thin;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 1%;
+}
+
+
+.wrapper .main .main_content .acadunits_content{
+    font-size:120%
+}
+.wrapper .main #menu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav {
+    text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-active {
+    background-color: rgb(123,17,19);
+    border-color: rgb(88, 8, 9);
+}
+
+.ui-tabs .ui-tabs-nav li{
+    float: none !important;
+    display: inline-block;
+    margin-bottom: -5.5px !important;
+}
+
+.ui-tabs .ui-tabs-nav li:hover {
+    background-color:rgb(123,17,19);
+    transition: 0.4s;
+    color: #fff !important;
+}
+
+.ui-tabs .ui-tabs-nav li:hover a{
+    color: #fff !important;
+}
+
+.ui-selectmenu-button {
+    background-color: rgb(123,17,19) !important;
+    border-radius: 20px !important;
+    appearance: none;
+}
+
+
+.ui-selectmenu-button .ui-selectmenu-text {
+    font-family: trajan !important;
+    color: white !important;
+    text-align:center !important;
+}
+
+.ui-menu{
+    border-radius: 20px !important;
+    font-family: trajan !important;
+
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    font-family: trajan !important;
+    text-align: center; 
+}
+
+#history {
+    text-indent: 10%
+}
+
+#vision {
+    text-align: center;
+}
+
+
+#mission{
+    text-indent: 10%;
+}

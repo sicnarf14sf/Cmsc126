@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign-up</title>
+      <link rel="icon" href="images/logo.png">
+      <link rel="stylesheet" href="login.css">
+      <script src="https://kit.fontawesome.com/97177ae356.js" crossorigin="anonymous"></script>
+      <script src="login.js"></script>
+      <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui">
+      <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+      <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+   </head>
+   <body>
+      <div class ="wrapper">
+         <div class="sidebar">
+            <ul>
+               <img src="images/logo.png">
+               <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+               <li><a href="acadUnits.html"><i class="fas fa-id-card-alt"></i> Academic Units</a></li>
+               <li><a href="academicPrograms.html"><i class="fas fa-graduation-cap"></i> Academic Programs</a></li>
+               <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Sign-up</a></li>
+            </ul>
+         </div>
+         <div class="login_content">
+            <div class="header">
+               <h1>University of the Philippines Mindanao</h1>
+               <h4>Portal</h4>
+            </div>
+            
+            <div class="page">
+               <h2 class="Sign2">Fill out the details below</h2>
+               <form class= "box">
+                  <p class="radioGender">Name: <input type="text" id="firstName" class="input-box" placeholder=" First name"> <input type="text" id="middleName" class="input-box" placeholder=" Middle name">  <input type="text" id="lastName" class="input-box" placeholder=" Last Name"></p>
+                  <p class="radioGender">         
+                     Gender: <input type="radio" name="gender" Value="Male"> Male <input type="radio" name="gender" Value="Female"> Female 
+                  </p>
+                  <p class="radioGender"> Enter Birthdate:
+                     <input type= "text" id="datepicker" class="input-box" placeholder=" Click to select birth date">
+                  </p>
+                  <p class="radioGender">Enter Province: <input type="text" id="Province" class="input-box" placeholder=" Enter Province"> </p>
+                  <p class="radioGender">Enter Year Level: <input type="number" id="year" class="input-box" min="1" max="5" placeholder=" Use up/down arrows">  </p>
+                  <p><button type="submit" class="button" value="submit">submit</button></p>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+         
+      <script src="jquery-ui-1.12.1/jquery.js" type="application/x-javascript"></script>  
+      <script src="jquery-ui-1.12.1/jquery-ui.js" type="application/x-javascript"></script>
+      <script src="login.js"></script>
+   </body>
+</html>

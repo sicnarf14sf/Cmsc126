@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="upMin2.css">
+    <script src="https://kit.fontawesome.com/97177ae356.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script>
+        $('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+    </script>
+    <style>
+        .nav-tabs {
+    border-bottom: 1px solid #DDDDDD;
+}
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px 4px 0 0;
+    line-height: 1.42857;
+    margin-right: 2px;
+}
+.nav-tabs > li > a:hover {
+    border-color: #EEEEEE #EEEEEE #DDDDDD;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DD656A;
+    border-color: #DDDDDD #DDDDDD rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #555555;
+    cursor: default;
+}
+.nav-tabs.nav-justified {
+    border-bottom: 0 none;
+    width: 100%;
+}
+.nav-tabs.nav-justified > li {
+    float: none;
+}
+.nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    left: auto;
+    top: auto;
+}
+    </style>
+</head>
+<body>
+    
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href='#tab1'>Tab 1</a></li>
+        <li><a href='#tab2'>Tab 2</a></li>
+        <li><a href='#tab3'>Tab 3</a></li>
+      </ul>
+      
+    
+    
+        <div id='content' class="tab-content">
+          <div class="tab-pane active" id="tab1">
+            <p>Hi, this is the first tab.</p>
+          </div>
+          <div class="tab-pane" id="tab2">
+           <p>This is the 2nd tab.</p>
+          </div>
+          <div class="tab-pane" id="tab3">
+              <p>And this is the 3rd tab.</p>
+          </div>
+          <div class="tab-pane" id="tab4"></div>
+        </div>    
+    
+
+</body>

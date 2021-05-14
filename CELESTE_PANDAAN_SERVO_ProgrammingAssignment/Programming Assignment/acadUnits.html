@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Units</title>
+    <link rel="stylesheet" href="upMin2.css">
+    <link rel="icon" href="images/logo.png">
+    <script src="https://kit.fontawesome.com/97177ae356.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#selectMenu').selectmenu({
+                width: 600,
+                select: function(event, ui) {
+
+                    if(ui.item.value == "1") {
+                        document.getElementById("collegeLogo").src = "images/csm-logo.png"
+                        document.getElementById("myP").innerHTML = "The College of Science and Mathematics specifically focuses on studying local flora and pioneering scientific development. Under this unit, there are three departments, four courses and around 47 faculty members.";
+                    }
+                    else if(ui.item.value == "2") {
+                        document.getElementById("collegeLogo").src = "images/chss-logo.png"
+                        document.getElementById("myP").innerHTML = "The College of Humanities and Social Sciences is mainly focused on communication and the cultural diversity of mindanao. It has four degree programs, four departments and around 38 faculty members.";
+                    }
+                    else {
+                        document.getElementById("collegeLogo").src = "images/som-logo.png"
+                        document.getElementById("myP").innerHTML = "The School of Management mainly focuses on research about supply chain management. It has three programs, and has around 32 faculty members.<br><br>";
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class ="wrapper">
+        <div class="sidebar">
+            <ul>
+                <img src="images/logo.png">
+                <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="acadUnits.html"><i class="fas fa-id-card-alt"></i> Academic Units</a></li>
+                <li><a href="academicPrograms.html"><i class="fas fa-graduation-cap"></i> Academic Programs</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Sign-up</a></li>
+            </ul>
+        </div>
+        <div class = "main">
+            <div class="main_content" style="margin-top: 2.3%">
+                <h1>Academic Units</h1>
+            </div>
+            <div id="menu">
+                <select id = "selectMenu">
+                    <option value="0" selected disabled hidden>Select your college</option>
+                    <option value="1">College of Science and Mathematics</option>
+                    <option value="2">Humanities & Social Sciences</option>
+                    <option value="3">School of Management</option>
+                </select>
+            </div>
+            <div class="main_content">
+                <div class="acadunits_content">
+                    <p class="header" style="padding: 1.3%;"></p>
+                    <img id = "collegeLogo" src="">
+                    <p class="info" id="myP"></p>
+                </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

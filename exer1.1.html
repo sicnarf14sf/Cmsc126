@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script>
+function getTotalGross() {
+    var a, c, d;
+
+    a = Number(document.getElementById("Income").value);
+    c = 13;
+    d = a * c;
+
+  document.getElementById("answer").value = d;
+}
+function GSISdeduction(){
+  var a, b, c;
+
+  a= Number(document.getElementById("Income").value);
+  b= 0.09;
+  c = a * b;
+
+  return c;
+}
+
+function SSSdeduction(){
+  var a, b, c;
+
+  a= Number(document.getElementById("Income").value);
+  b= 0.11;
+  c= a * b;
+
+  return c;
+}
+
+function PagIbigdeduction(){
+  var a, b, c;
+
+    a= Number(document.getElementById("Income").value);
+    b= 0.01375;
+    c= a * b;
+
+    return c;
+
+}
+
+function philhealthDeduction(){
+  var a, b, c;
+
+    a= Number(document.getElementById("Income").value);
+    b= 0.035;
+    c= a * b;
+
+    return c;
+}
+
+function APE(){
+  var a, b, c;
+
+  a= Number(document.getElementById("Dependents").value);
+  b= 50,000;
+  if(a <= 0)
+  {
+    c = 0
+  }
+  else if( 0 < a < 5)
+  {
+    c = a * b;
+  }
+  else
+  {
+    c = 200,000;
+  }
+
+  return c;
+}
+
+function check()
+{
+  var cb = document.getElementById("yes");
+  if(cb.checked == true)
+  {
+    var a;
+    a = Number(GSISdeduction()) + Number(philhealthDeduction()) + 50000 + Number(APE()) + Number(PagIbigdeduction());
+
+    document.getElementById("answer2").value = a;
+
+  }
+  else
+  {
+    var a;
+    a = Number(SSSdeduction()) + Number(philhealthDeduction()) + 50000 + Number(APE()) + Number(PagIbigdeduction());
+
+    document.getElementById("answer2").value = a;
+  }
+
+  return a;
+}
+
+function netTaxIncome()
+{
+  var a, b, c, d;
+
+  a = Number(document.getElementById("Income").value);
+  b = 13;
+  c = a * b;
+
+  d = c - check();
+
+  document.getElementById("answer 3").value = d;
+
+}
+
+
+
+
+</script>
+</head>
+<body>
+<font face="sans-serif">
+<center><h1>This webpage calculates the income tax payable by earning Filipino individuals and business organizations</h1></center><br>
+
+
+Monthy Income(Pesos): <input id="Income" placeholder="Enter here" size="30">
+<br><br>
+Number of dependent (e.g old parents/children below 21): <input id="Dependents" placeholder="Enter here" size="30">
+<br><br>
+Are you a Government Employee?
+<p><input type="radio" id = "yes" name="yes_no" style="font-family: sans-serif;">Yes</input></p>
+<p><input type="radio" id = "no" name="yes_no" style="font-family: sans-serif;">No</input></p>
+<br><br>
+ <button onclick="getTotalGross(); check() " id= "btn1"> Click here if finished </button>
+ <p>Total Gross Income <input id="answer"></p>
+ <p>Total Deductions <input id="answer2"></p>
+ <p>Net Taxable Income <input id="answer3"></p></font>
+</body>
+</html>
